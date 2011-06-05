@@ -1,0 +1,76 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/details/json?key=foobar&reference=CnRpAAAAjVikwLlaJ2WN8i0cPwu3A0zcE9iCSMDihmbn_bkXYkM-7xtRcn-ZAmrQtWAAzxQPYxZmyaCeNIMQ_t_eWNDp1CmviA-iY-M63UjpUywQeR5B1dmZ2_Ne756bAjp2uYXTxobVtLKeWkVmGz2dFUMacRIQ6MbrsRQfx1fIbMf4s-s6RhoU-5Uxc26iNf80jxRypRlMJl_k6Gg&sensor=false
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      server: 
+      - mafe
+      date: 
+      - Sun, 05 Jun 2011 15:32:44 GMT
+      x-xss-protection: 
+      - 1; mode=block
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+         "html_attributions" : [],
+         "result" : {
+            "address_components" : [
+               {
+                  "long_name" : "9101",
+                  "short_name" : "9101",
+                  "types" : [ "street_number" ]
+               },
+               {
+                  "long_name" : "Blvd 26, Suite 101",
+                  "short_name" : "Blvd 26, Suite 101",
+                  "types" : [ "route" ]
+               },
+               {
+                  "long_name" : "North Richland Hills",
+                  "short_name" : "North Richland Hills",
+                  "types" : [ "locality", "political" ]
+               },
+               {
+                  "long_name" : "TX",
+                  "short_name" : "TX",
+                  "types" : [ "administrative_area_level_1", "political" ]
+               },
+               {
+                  "long_name" : "76180",
+                  "short_name" : "76180",
+                  "types" : [ "postal_code" ]
+               }
+            ],
+            "formatted_address" : "9101 Blvd 26, Suite 101, North Richland Hills, TX 76180, United States",
+            "formatted_phone_number" : "(817) 503-7344",
+            "geometry" : {
+               "location" : {
+                  "lat" : 32.8526060,
+                  "lng" : -97.19118399999999
+               }
+            },
+            "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id" : "8e4570eb70ddeea123e33d0c6b584ffe3a967d4e",
+            "name" : "Roots Coffeehouse",
+            "rating" : 4.60,
+            "reference" : "CnRpAAAA3YgHq1uZnJITbzaknQcij762-bPT_1BUZykuRSh9nCsszGkp_3kUZakJGiM_QKfBLWnvqE_vGR2fjilbxF0x8awlmJWEKDFWMp4ZX7jLWuXOVpqE7u-FwJj9r4tUb7yDZSRDkUSZhji8iMiZr-aJXBIQN2A3BhfTDeN6vBv8nzSyQxoUrnAGcz41OlHk7g3oa4YapsKVBYM",
+            "types" : [ "food", "establishment" ],
+            "url" : "http://maps.google.com/maps/place?cid=12868917690814993239",
+            "vicinity" : "Blvd 26, Suite 101, North Richland Hills"
+         },
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

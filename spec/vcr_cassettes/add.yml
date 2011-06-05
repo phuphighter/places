@@ -1,0 +1,32 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://maps.googleapis.com:443/maps/api/place/add/json?key=foobar&sensor=false
+    body: "{\"accuracy\":50,\"location\":{\"lat\":-33.866971,\"lng\":151.195875},\"name\":\"Google Shoes!\",\"types\":[\"shoe_store\"]}"
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      server: 
+      - mafe
+      date: 
+      - Sun, 05 Jun 2011 22:38:01 GMT
+      x-xss-protection: 
+      - 1; mode=block
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+         "id" : "a306f93119e8d12eabadb79bd82f0d3e547d0ad2",
+         "reference" : "CkQxAAAAgoh_Zw4jcE_9-B1b56AgriFZKVdpgc5yYXtwRAPjs-aWIxgUi6Wl-Qe-DdDP5m7PUCzy9iOqWWmdx4sU53035RIQqqNIGGPevJaTM9l1Xh9hpRoUWxhdGBS0XppFiJhZMXX_jiuDsdY",
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

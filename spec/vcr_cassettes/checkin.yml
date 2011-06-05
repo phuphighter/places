@@ -1,0 +1,28 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: https://maps.googleapis.com:443/maps/api/place/check-in/json?key=foobar&sensor=false
+    body: "{\"reference\":\"CnRpAAAAjVikwLlaJ2WN8i0cPwu3A0zcE9iCSMDihmbn_bkXYkM-7xtRcn-ZAmrQtWAAzxQPYxZmyaCeNIMQ_t_eWNDp1CmviA-iY-M63UjpUywQeR5B1dmZ2_Ne756bAjp2uYXTxobVtLKeWkVmGz2dFUMacRIQ6MbrsRQfx1fIbMf4s-s6RhoU-5Uxc26iNf80jxRypRlMJl_k6Gg\"}"
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      server: 
+      - mafe
+      date: 
+      - Sun, 05 Jun 2011 18:46:00 GMT
+      x-xss-protection: 
+      - 1; mode=block
+      cache-control: 
+      - private
+    body: |
+      {
+         "status" : "OK"
+      }
+
+    http_version: "1.1"

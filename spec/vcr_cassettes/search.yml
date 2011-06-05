@@ -1,0 +1,47 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://maps.googleapis.com:443/maps/api/place/search/json?key=foobar&location=32.8481659,-97.1952847&name=roots&radius=500&sensor=false&types=food
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json; charset=UTF-8
+      server: 
+      - mafe
+      date: 
+      - Sun, 05 Jun 2011 15:19:49 GMT
+      x-xss-protection: 
+      - 1; mode=block
+      cache-control: 
+      - private
+      vary: 
+      - Accept-Language
+    body: |
+      {
+         "html_attributions" : [],
+         "results" : [
+            {
+               "geometry" : {
+                  "location" : {
+                     "lat" : 32.8526060,
+                     "lng" : -97.19118399999999
+                  }
+               },
+               "icon" : "http://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+               "id" : "8e4570eb70ddeea123e33d0c6b584ffe3a967d4e",
+               "name" : "Roots Coffeehouse",
+               "reference" : "CnRoAAAANen2s7DMyGHNyW-MgJokmzmSGP0D7Y-LP5g6KDrI2_P9MOgxq8f50f3U9le53E8YAVbiChe9P-0GFyqn0UMMX6a7wKpgUSwysdiiPpA9jTdygf3gdGYC0W1-C7H2s9j39C7ryP3yFGj-fD2EzDdLZxIQI6G8HpURe4hJKWsxfRsReRoUSO5SZViRU0XOTZ6FMZ1xTB5t02Y",
+               "types" : [ "food", "establishment" ],
+               "vicinity" : "Blvd 26, Suite 101, North Richland Hills"
+            }
+         ],
+         "status" : "OK"
+      }
+
+    http_version: "1.1"
