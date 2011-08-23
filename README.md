@@ -4,12 +4,13 @@ Ruby wrapper for the [Google Places API](http://code.google.com/apis/maps/docume
 
 ## Installation
 
-Inside your Gemfile:
-  gem 'places'
+Inside your Gemfile:   
+gem 'places'
     
 ## Get Google Places API credentials
 
-Go here and activate it: [https://code.google.com/apis/console](https://code.google.com/apis/console)
+Go here and activate it:   
+[https://code.google.com/apis/console](https://code.google.com/apis/console)
     
 ## Usage
 
