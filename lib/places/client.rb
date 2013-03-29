@@ -38,8 +38,8 @@ module Places
       sensor = options.delete(:sensor) || false
       language = options.delete(:language) || nil
       extensions = options.delete(:extensions) || nil
-      userIp = options.delete(:userIp) || nil
-      quotaUser = options.delete(:quotaUser) || nil
+      user_ip = options.delete(:userIp) || nil
+      quota_user = options.delete(:quotaUser) || nil
 
       reference = options.delete(:reference)
       options = {
@@ -47,8 +47,8 @@ module Places
           :sensor => sensor,
           :language => language,
           :extensions => extensions,
-          :userIp => userIp,
-          :quotaUser => quotaUser
+          :userIp => user_ip,
+          :quotaUser => quota_user
       }
       mashup(self.class.get("/details/json", :query => options.merge(self.default_options)))
     end
