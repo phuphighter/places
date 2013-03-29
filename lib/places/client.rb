@@ -35,9 +35,11 @@ module Places
     end
     
     def details(options={})    
-      sensor = options.delete(:sensor) || false  
+      sensor = options.delete(:sensor) || false
+      language = options.delete(:language) || nil
+      extensions = options.delete(:extensions) || nil
       reference = options.delete(:reference)      
-      options = {:reference => reference, :sensor => sensor}    
+      options = {:reference => reference, :sensor => sensor, :language => language, :extensions => extensions}
       mashup(self.class.get("/details/json", :query => options.merge(self.default_options)))      
     end
     
